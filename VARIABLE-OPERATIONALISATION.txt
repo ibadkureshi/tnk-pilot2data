@@ -1,0 +1,29 @@
+Variables:
+
+patientno - integer variable giving the 'patient' number. From 1 till maxPatients (10000). Just used to track an appointment of journey.
+
+postcode - a UK standard postcode typicall of the style AA9 9AA or AA99 9AA. These are real postcodes that actually exist and can contain between 1-100+ domiciles. This is a closed system so further information can not be included here. The code randomly selects a postcode to represent a 'patient'. A postcode can be selected more than once as there can be more than 1 'patient' per postcode. For the synthetic dataset the catchment area included 48000+ valid postcodes out of which a selection was made 10000 times. 
+
+latitude - The latitude for the above postcode. This is real and sourced from the public data available on postcodes.
+
+longitude - The longitude for the above postcode. This is real and sourced from the public data available on postcodes.
+
+gpdate - The synthetic date the in dd/mm/yyyy format for when the 'patient' met their local general practitioner. Synthetically generated based on working days and average 'patients' per day. Bundled data covers a period from 01/01/2019 till 31/12/2019 giving a pool of 260+ possible dates removing weekend. Given a population of 10000 that averages to just less that 40 appointments/day. So the first 40 get the date 1/1/2019, the next 40 get 2/1/2019, and so on.
+
+gpname - Based on public data of registered GP's this practice is selected based on geographical proximity to the 'patients' postcode. The geographic catchment area for the bundled data include 400+ GP practices. These are then assigned to the 10000 'patients' based on distance. It is not compulsory that every GP is assigned. Given that that <25% of postcodes feature in sample dataset and that a GP covers many adjacent postcodes they are likely many not included.
+
+gppostcode - From the public data the real postcode of the registered GP. 
+
+gplatitude - The real latitude of the postcode of the registered GP (based on a join with the public postcode data). This point is not guaranteed to exactly fall on the practice, but will be close by. 
+
+gplongitude - The real longitude of the postcode of the registered GP (based on a join with the public postcode data). This point is not guaranteed to exactly fall on the practice, but will be close by.
+
+clinicdate - A synthetic and random date that is based on the gpdate variable and observed behaviour from Track&Know's pilot. clinicdate will fall anywhere between +7 days to +6weeks (42 days) from the GP referral date. The code chooses a random number from 7-42. 
+
+clinicname - Based on the public BLF open dataset on Obstructive Sleep Apnea. Manually a list was created to include OSA diagnostic facilities in the geographic area of interest. The code then randomly assigns one of the clinics to each 'patient'. The random selector is biased towards one facility to mimic the real world behaviour of 1 primary facility supported by secondary/out-reach facilities.
+
+clinicpostcode - The real postcode of the facilities as gathered from BLF.
+
+cliniclatitude - The real latitude of the postcode of the facility GP (based on a join with the public postcode data). This point is not guaranteed to exactly fall on the facility, but will be close by.
+
+cliniclongitude - The real longitude of the postcode of the facility (based on a join with the public postcode data). This point is not guaranteed to exactly fall on the facility, but will be close by. 
