@@ -1,5 +1,15 @@
 # Track&Know Pilot 2 Synthetic Data Generator
 
+## About Track & Know
+
+<img src="https://github.com/ibadkureshi/tnk-locationallocation/blob/master/docs/images/proj-logo.png?raw=true" align="right" alt="Track&Know Logo" >
+
+* **Project Title** - Big Data for Mobility Tracking Knowledge Extraction in Urban Areas
+* **Project Website** - `https://trackandknowproject.eu/`
+* **Work Package** - WP6: Pilots [*Leader: SIS*]
+* **Task & Deliverable** - 6.3 Pilot 2: Healthcare service [*Leader: PAP*]
+* **Component Leader** - Inlecom Group
+
 ## Acknowledgement
 
 !["Funded by EU logo"](https://github.com/ibadkureshi/tnk-locationallocation/raw/master/docs/images/EU-H2020.jpg "Funded by EU H2020") This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 780754.
